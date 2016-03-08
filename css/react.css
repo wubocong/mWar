@@ -1,0 +1,75 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#background, #background:after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-size: background;
+    opacity: 0.45;
+    -webkit-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+    -moz-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+    -ms-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+    -o-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+    transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+}
+
+#background:after {
+    background-image: url(../img/gem5.jpg);
+    background-position: 50% 50%;
+    background-repeat: repeat-y;
+}
+
+#background {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: #000;
+}
+
+#cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2000;
+}
+
+#nav {
+    position: absolute;
+}
+
+#up, #back {
+    z-index: 1100;
+    position: absolute;
+}
+
+#footer {
+    z-index: 1100;
+    position: absolute;
+    bottom: -56px;
+}
+
+.middleCard {
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+@media(max-width:960px) {
+    .middleCard {
+        width: 90%;
+    }
+}
